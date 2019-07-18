@@ -36,5 +36,8 @@
     "eslint-plugin-import": "^2.18.0",
     "nodemon": "^1.19.1",
     "regenerator-runtime": "^0.13.2"
+  },
+  "engines": {
+    "node": "10.15.1"
   }
 }
