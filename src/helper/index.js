@@ -119,17 +119,8 @@ export const expectObj = (obj, expected, unwanted = []) => {
 };
 
 export const responseData = (res, success, code, data) => {
-  let status;
-  let dataKey;
-  if (success) {
-    status = 'succeed';
-    dataKey = 'data';
-  } else {
-    status = 'error';
-    dataKey = 'error';
-  }
+  const dataKey = success === true ? 'data' : 'error';
   return res.status(code).send({
-    status,
     success,
     [dataKey]: data,
   });
