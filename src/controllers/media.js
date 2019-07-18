@@ -85,7 +85,7 @@ export const media = (req, res) => {
     return convertText2Image(req, res, filepath, extension);
   }
   //   Send Out data
-  return responseData(res, true, 200, 'Successfully uploaded');
+  return responseData(res, true, 200, `Successfully uploaded ${start} bytes`);
 };
 
 export const getImages = (req, res) => {
