@@ -41,7 +41,7 @@ export const cloudinaryUpload = (req, res, base64Data, filepath) => {
       //   mediaDebug(result.url.replace(/v[0-9]+\//, ''));
       return fs.unlink(`${filepath}.txt`, (er) => {
         if (er) responseData(res, false, 401, 'Error Delete text file');
-        return responseData(res, true, 200, 'Uploading to cloudify');
+        return responseData(res, true, 200, result);
       });
     });
 };
